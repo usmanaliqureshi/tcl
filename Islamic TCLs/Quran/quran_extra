@@ -1,0 +1,76 @@
+[help]
+This BOT supports many features but still it maintains simplicity.
+You can Read Quran in as many languages as possible and even multiple
+languages at once. Like readin Arabic and then its Translation in your
+language. Also possible to read 2 or more different translations.
+You can search in any translation or set of given translations.
+Commands are:-
+  $tmqb(c,bs)Quran$tmqb(c,be) Surah-No. Ayah-No.
+    eg: Quran 1:1 or Quran 1:1-7 or Quran 112 1 4
+  $tmqb(c,bs)Quran$tmqb(c,be) Surah-Name Ayah-Nos.
+    eg: Quran Rahman 20-27  Type a surah Name alone to see its detail.
+There are many switches which you can apply at the end of these commands.
+  Switches are ! # @ = + ^     Type $tmqb(c,us)Quran help Switch$tmqb(c,ue) for more detail.
+In one command you can request many Translations
+  eg: $tmqb(c,bs)Quran$tmqb(c,be) AR AQ 113 1
+Other commands are: $tmqb(c,bs)Random - Last - Next - Prev - Search - Show
+                    $tmqb(c,bs)Surah - Translations - Ruku - Context - Auto  
+                    $tmqb(c,bs)Reader - SetTranslation - Info
+To know more about these type Quran Help command
+[switch]
+Add Switches at the end of the commands to achieve the following results:
+!  all outputs are in CAPS
+#  all output lines are in short lines
+@  Output uses alternate colour scheme
+=  Shows output in single line
++ & ^ Shows output with decoration.
+[rand]
+Shows Random Verses.
+Ex: Quran Rand
+[last]
+Shows the last verse quoted by the BOT. This is useful when you want to read the same last verse from different Translations.
+Ex: Quran GQ Last
+[next]
+Show the Next verse and if you give a Number after it then it will try to show till that verse.
+Ex: Quran Next
+This will show one verse which comes after the last Verse. If the last verse was end of Surah then it goes to Next Surah.
+Ex: Quran Next 25
+The above example will show Next verses in the surah till verse No.25 If last verse was greater than 25 then this is ignored.
+[prev]
+Show one previous verse. If the last verse was starting verse of a Surah then it show last Ayah of the previous Surah.
+[search]
+This BOT can search in whole Quran. It can also search in Multiple Translations. It is also possible to search in Translitrations. Serching in Arabic text is still not functional.
+This BOT searches for a given word on pattern basis. Suppose if you searched for \"KNOW\" then it will match \"KNOWING\" and \"UNKNOWN\" too. If you search for \"KNOWN\" then it will match \"UNKNOWN\" too and all words containing this pattern.
+By defualt it searches for each and every 'search word' provided in single translation and single verse alone. To search for 2 consecutive words like \"no faith\" enclose the search words in QUOTES or else in Curly braces \{\}.
+Ex: Quran search \"no faith\"
+Ex: Quran search {no faith}
+Ex: Quran search no\\ faith
+All these 3 above will fetch same result.
+You can also do complex searches but only \"AND\" or \"&\" will be possible. This BOT does not support search on basis of \"OR\". Even mising of \"AND\" and \"OR\" is not implemented.
+Ex: Quran Search \"no faith\" hereafter
+The above example will search for a verse containging the patter \"no faith\" at one place and \"hereafter\" at any place in the same verse.
+[show]
+When the search yields 3 or less than 3 results then the BOT shows the result automatically.
+Else you can type \"Quran show\" and the BOT will show you 3 results for every command. You can continue so till you see last result.
+Ex: Quran Show
+[translations]
+Gives you a list of Translations in this BOT
+Ex: Quran Translations
+[ruku]
+Ruku markings were done in Quran to make it easier to undertsnad where the meaning changes or context changes. Or a position where a passage is complete. This was added in quran much later so we cannot rely on this.
+This command shows you ruku marking for a given sura and verse refrences.
+Ex: Quran Ruku 2:200
+[context]
+Same as Ruku command but it shows the Verses instead of giving refrences. See Quran Ruku
+Ex: Quran Ruku
+[auto]
+No help on this as its for mostly for OPs
+[reader]
+No help on this as its for mostly for OPs
+[settrans]
+Sets Default Translation to be used in a channel or by a user in private/query.
+Ex: Quran SetTranslation GQ
+This will use GQ for all subsequent commands. You can also select Multiple Translations but in that case BOT will restrict to one Ayah at a time only.
+[info]
+Gives information on the perticular Translation chosen.
+Ex: Quran NQ Info
